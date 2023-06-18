@@ -51,25 +51,25 @@
                     <div class="form-group mb-3">
                         <label for="firstName" class="form-label">FirstName</label>
                         <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name" th:field="*{firstName}">
-<!--                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+                        <div class="form-text text-danger" th:errors="*{firstName}" th:if="#{fields.hasErrors('firstName')}"></div>
                     </div>
 
                     <div class="form-group mb-3">
                         <label for="lastName" class="form-label">LastName</label>
                         <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last name" th:field="*{lastName}">
-                        <!--                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+                        <div class="form-text text-danger" th:errors="*{lastName}" th:if="#{fields.hasErrors('lastName')}"></div>
                     </div>
 
                     <div class="form-group mb-3">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" th:field="*{email}">
-                        <!--                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+                        <div class="form-text text-danger" th:errors="*{email}" th:if="#{fields.hasErrors('email')}"></div>
                     </div>
 
                     <div class="form-group mb-3">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" th:field="*{password}">
-                        <!--                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+                        <div class="form-text text-danger" th:errors="*{password}" th:if="#{fields.hasErrors('password')}"></div>
                     </div>
 
                     <div class="form-group">
